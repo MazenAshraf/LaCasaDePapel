@@ -1,0 +1,150 @@
+*{
+margin: 0;
+padding: 0;
+font-family: Bookman, URW Bookman L, serif;
+}
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../first.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.main{
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 25px;
+}
+	.main::after{	
+    content:"";	
+    clear: both;	
+    display: block;	
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+      margin-right: 35px;	
+    line-height: 80px;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li>a{
+    text-decoration: none;
+    color:white;
+    padding: 10px 20px;
+/*    border:1px solid white;*/
+/*    transition: 0.6s ease;*/
+    
+}
+
+ul li a:hover{
+    background-color: white;
+    color:black;
+    text-decoration: none;
+}
+
+ul li.active a{
+    background-color: white;
+    color:black;
+}
+.title{
+    float:left;
+    margin-left: auto;
+}
+header h1{
+    padding-left: 20px;
+    color:white;
+    font-size: 30px;
+}
+#de{
+    background-color: red;
+    color:white;
+}
+.Para{
+    color:white;
+    position: absolute;
+    top:60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.Para p{
+    color: white;
+    font-size: 20px;
+}
+#check{
+    display: none;
+}
+.checkbtn{
+    color: white;
+    font-size: 40px;
+    float:right;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+    margin-right: 50px;
+}
+@media only screen and (max-width:950px){
+    
+    body{
+        text-align: center;
+    }
+    
+    .Para p{
+    color: white;
+    font-size: 15px;
+    }
+    .content-style{
+        
+        display: flex;
+        flex-flow: column;
+    }
+    .Paragraph{
+        
+        justify-content: center;
+        align-content: center;
+        text-align: justify;
+    }
+    
+    .img{
+            text-align: center;
+            justify-content: center;
+            align-content: center ;
+            padding-bottom: 10px;
+    }
+    ul{
+         z-index: 100;
+        position: fixed;
+        width:100%;
+        height: 100vh;
+        background: white;
+        top:90px;
+        left:-100%;
+        transition: 0.5s all;
+        text-align: center;
+    }
+    
+    ul li{
+        display: block;
+    }
+    
+    ul li a{
+        color: black;
+        font-size: 30px;
+        border-bottom: 1px solid black;
+        text-transform: uppercase;
+    }
+    
+    .checkbtn{
+        display: block;
+    }
+    
+    #check:checked~ul{
+        left:0;
+    }
+      a.active,a:hover{
+        background: none;
+    }
+}

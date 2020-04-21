@@ -168,3 +168,21 @@ header h1{
         background: none;
     }
 }
+
+@media only screen and (max-width:450px){
+    
+    .carousel{
+    width:370px !important;
+    position: relative;
+    left:50%;
+    bottom:40%;
+    border-radius: 4px;
+    transform: translateX(-50%);
+}
+    .checkbtn{
+        font-size: 40px;
+        margin-right: 30px;
+    }
+    
+    
+}

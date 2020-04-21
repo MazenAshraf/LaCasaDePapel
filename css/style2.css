@@ -23,7 +23,7 @@ ul{
     float: right;
     list-style-type: none;
     margin-top: 25px;
-      margin-right: 35px;	
+    margin-right: 35px;	
     line-height: 80px;
 }
 
@@ -55,6 +55,9 @@ ul li.active a{
     margin-left: auto;
 }
 header h1{
+    position: relative;
+    top:20px;
+    left:80px;
     padding-left: 20px;
     color:white;
     font-size: 30px;
@@ -65,14 +68,16 @@ header h1{
 }
 .Para{
     color:white;
-    position: absolute;
-    top:60%;
+    position: relative;
+    top:40%;
     left: 50%;
     transform: translate(-50%,-50%);
+    width: 80%;
+    height: calc(100vh-80px);
 }
 .Para p{
     color: white;
-    font-size: 20px;
+    font-size: 40px;
 }
 #check{
     display: none;
@@ -147,4 +152,21 @@ header h1{
       a.active,a:hover{
         background: none;
     }
+}
+
+@media only screen and (max-width:450px){
+    
+    .Para{
+    color:white;
+    position: relative;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: calc(100vh-80px);
+}
+    .Para p{
+        font-size: 50px;
+    }
+
 }
